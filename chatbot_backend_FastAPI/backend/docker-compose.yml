@@ -1,0 +1,18 @@
+
+
+services:
+  db:
+    image: postgres:16
+    container_name: studybudy_db
+    restart: always
+    environment:
+      POSTGRES_USER: studybudy
+      POSTGRES_PASSWORD: studybudy
+      POSTGRES_DB: studybudy_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - studybudy:/var/lib/postgresql/data
+
+volumes:
+  studybudy:

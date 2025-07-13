@@ -1,0 +1,83 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyd
+*.pyo
+*.pdb
+*.egg-info/
+*.eggs/
+*.env
+.env
+.venv
+venv/
+ENV/
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# FastAPI/Starlette
+instance/
+*.db
+*.sqlite3
+
+# Alembic
+alembic/versions/*.pyc
+
+# VS Code
+.vscode/
+.history/
+
+# Node.js / React / Next.js (frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.next/
+out/
+dist/
+build/
+.cache/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test & Coverage
+.coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+coverage.xml
+*.cover
+*.py,cover
+
+# Misc
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+
+# PDF/Uploads/Temp
+*.pdf
+*.tmp
+*.temp
+*.bak
+
+# Docker
+**/data/
+**/postgres-data/
+docker-compose.override.yml
+
+# Ignore local database files
+*.sqlite
+*.sqlite3
+
+# Ignore Chroma vectorstore (if persisted)
+chroma_db/
