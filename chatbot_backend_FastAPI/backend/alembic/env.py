@@ -15,7 +15,7 @@ try:
     print(f"🔍 DEBUG: Loaded DATABASE_URL from settings: {SQLALCHEMY_DATABASE_URL}")
 except ImportError as e:
     # Fallback if settings isn't available
-    SQLALCHEMY_DATABASE_URL = "postgresql://studybudy:studybudy@localhost:5432/studybudy_db"
+    SQLALCHEMY_DATABASE_URL = "postgresql://studybudy:studybudy@127.0.0.1:5432/studybudy_db"
     print(f"🔍 DEBUG: Using fallback DATABASE_URL: {SQLALCHEMY_DATABASE_URL}")
     print(f"🔍 DEBUG: ImportError: {e}")
 
