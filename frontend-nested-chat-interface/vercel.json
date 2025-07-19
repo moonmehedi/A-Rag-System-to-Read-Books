@@ -1,12 +1,5 @@
 {
   "buildCommand": "pnpm build",
   "outputDirectory": "out",
-  "framework": "nextjs",
-  "installCommand": "pnpm install",
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
+  "installCommand": "pnpm install"
 }
