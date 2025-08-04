@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from app.db.session import SessionLocal
 from app.models.user import User
 from app.models.chat_message import ChatMessage
+from app.core.config import settings
 from passlib.context import CryptContext
 import jwt
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
@@ -10,9 +11,9 @@ from datetime import datetime, timedelta
 from pydantic import BaseModel
 import uuid
 
-SECRET_KEY = "supersecretkey"  # Use env var in production
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 7
+SECRET_KEY = settings.JWT_SECRET_KEY
+ALGORITHM = settings.JWT_ALGORITHM
+ACCESS_TOKEN_EXPIRE_MINUTES = settings.ACCESS_TOKEN_EXPIRE_MINUTES
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/token")
