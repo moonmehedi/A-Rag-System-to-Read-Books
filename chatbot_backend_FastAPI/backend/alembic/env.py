@@ -12,9 +12,12 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../.
 try:
     from app.core.config import settings
     SQLALCHEMY_DATABASE_URL = settings.DATABASE_URL
-except ImportError:
+    print(f"🔍 DEBUG: Loaded DATABASE_URL from settings: {SQLALCHEMY_DATABASE_URL}")
+except ImportError as e:
     # Fallback if settings isn't available
-    SQLALCHEMY_DATABASE_URL = "postgresql://studybudy:studybudy@localhost:5432/studybudy_db"
+    SQLALCHEMY_DATABASE_URL = "postgresql://studybudy:studybudy@127.0.0.1:5432/studybudy_db"
+    print(f"🔍 DEBUG: Using fallback DATABASE_URL: {SQLALCHEMY_DATABASE_URL}")
+    print(f"🔍 DEBUG: ImportError: {e}")
 
 # Import your Base and models
 from app.db.session import Base
@@ -23,6 +26,7 @@ from app.models.chat_message import ChatMessage
 
 config = context.config
 config.set_main_option("sqlalchemy.url", SQLALCHEMY_DATABASE_URL)
+print(f"🔍 DEBUG: Set Alembic URL to: {config.get_main_option('sqlalchemy.url')}")
 
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
