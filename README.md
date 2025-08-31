@@ -11,7 +11,7 @@ This system enables users to:
 - **🌳 Nested Conversations**: Create branching conversations from selected text snippets for deeper topic exploration
 - **🔍 Smart Context Retrieval**: Automatically finds relevant document sections to answer questions
 - **⚡ Real-time Streaming**: Get AI responses in real-time with streaming technology
-- **👥 User Management**: Secure authentication and personalized chat history
+- **👥 User Management**: Secure authentication and personalized chat history 
 - **📱 Responsive UI**: Modern, mobile-friendly interface with shadcn/ui components
 
 ## 🛠️ **Technology Stack**
