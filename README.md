@@ -6,7 +6,7 @@ A sophisticated **Retrieval-Augmented Generation (RAG)** chatbot system with nes
 
 This system enables users to:
 
-- **📚 Upload PDF Documents**: Upload and process PDF files for AI-powered Q&A
+- **📚 Upload PDF Documents**: Upload and process PDF files for AI-powered Q&A 
 - **💬 Interactive Chat**: Ask questions about uploaded documents with context-aware responses
 - **🌳 Nested Conversations**: Create branching conversations from selected text snippets for deeper topic exploration
 - **🔍 Smart Context Retrieval**: Automatically finds relevant document sections to answer questions
